@@ -1,8 +1,10 @@
 import { Hono } from "hono";
+import { prisma } from "../../prisma.js"
 
 export const postRouter = new Hono()
-  .get("/", (c) => {
-    return c.json([]);
+  .get("/", async (c) => {
+    const posts = await prisma.post.findMany()
+    return c.json(posts);
   })
   .get("/:id", (c) => {
     return c.json({});
@@ -13,6 +15,6 @@ export const postRouter = new Hono()
   .patch("/:id", (c) => {
     return c.json({});
   })
-  .delete("/:id", (c) => {
-    return c.json({ message: "" });
-  });
+//   .delete("/:id", (c) => {
+//     return c.json({ message: "" });
+//   });
