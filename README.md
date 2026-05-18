@@ -1,6 +1,5 @@
 ```
-npm install
-npm run dev
+103.55.37.89
 ```
 
 ```
