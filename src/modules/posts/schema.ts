@@ -6,6 +6,6 @@ export const createPostSchema = z.object({
 });
 
 export const updatePostSchema = z.object({
-	title: z.string().min(1).optional,
-	content: z.string().min(1).optional,
+	title: z.string().min(1).optional(),
+	content: z.string().min(1).optional(),
 });
