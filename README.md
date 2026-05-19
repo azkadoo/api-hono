@@ -4,7 +4,7 @@ IP
 ```
 103.55.38.57
 ```
-
+Port
 ```
-open http://localhost:8000
+8000
 ```
